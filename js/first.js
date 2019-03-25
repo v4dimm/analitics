@@ -49,8 +49,20 @@ function test() {
 					div4 = createTable(1, alternativs, totalSum);
 					div4.id = 'totalSum';
 					document.getElementById('totalSum').childNodes[0].childNodes[0].childNodes[1].childNodes[0].innerHTML = 'Сумма рангов';
-					}
+					document.getElementById('totalSum').childNodes[0].childNodes[0].childNodes[0].innerHTML = '';
+					}		
+
+				if (document.getElementById('totalRanges')) {
+				} else {
+					var totalSortRanges = [sortRanges(sortRanges(sum))];
+					div5 = createTable(1, alternativs, totalSortRanges);
+					div5.id = 'totalRanges';
+					document.getElementById('totalRanges').childNodes[0].childNodes[0].childNodes[0].innerHTML = '';
+					document.getElementById('totalRanges').childNodes[0].childNodes[0].childNodes[1].childNodes[0].innerHTML = 'R';
+				}			
 				});
+
+
 			}
 }
 
@@ -80,6 +92,7 @@ function createTable(experts, alternativs, values) {
 			else {
 				if (values) {
 					cell.innerHTML = values[i-1][j-1];
+					cell.width = 50;
 				}
 				else {
 					var input = document.createElement('input');
