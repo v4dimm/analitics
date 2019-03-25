@@ -1,9 +1,10 @@
 function test() {
 			var div = document.getElementById('input');
-			var div2 = document.getElementById('table');
+			// var div2 = document.getElementById('table');
 			var body = document.getElementsByClassName('menu state');
 			var experts = Number(div.childNodes[3].value);
 			var alternativs = Number(div.childNodes[5].value);
+			var columnSum = [];
 
 			if (document.getElementById('table')) {
 			} else {
@@ -33,6 +34,21 @@ function test() {
 				} else {
 					div3 = createTable(experts, alternativs, finishArray);
 					div3.id = 'newTable';
+					}
+
+				sum = finishArray.reduce(function (r, a) {
+					a.forEach(function (b, i) {
+						r[i] = (r[i] || 0) + b;
+					});
+					return r;
+				}, []);
+
+				var totalSum = [sum];
+				if (document.getElementById('totalSum')) {
+				} else {
+					div4 = createTable(1, alternativs, totalSum);
+					div4.id = 'totalSum';
+					document.getElementById('totalSum').childNodes[0].childNodes[0].childNodes[1].childNodes[0].innerHTML = 'Сумма рангов';
 					}
 				});
 			}
