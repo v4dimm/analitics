@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+	<nav class="navbar sticky-top navbar-light bg-light home">
+	  <a class="navbar-brand" href="index.html"><p>Home</p></a>
+	</nav>
+
+	<div class="menu state">
+		<h1>
+			Построить групповую и обобщенную ранжировки критериев по важности
+		</h1>
+
+		<div class="accordion" id="accordionExample">
+		  <div class="card">
+		    <div class="card-header" id="headingOne">
+		      <h5 class="mb-0">
+		        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+		          Скрыть теорию
+		        </button>
+		      </h5>
+		    </div>
+
+		    <div id="collapseOne" class="collapse show">
+		      <div class="card-body">
+			     <p>
+			     	Ранжирование представляет собой процедуру упорядочения альтернатив, выполняемую экспертом в шкале поряда. На основе своих знаний и опыта эксперт раполагает объекты в порядке предпочтения, руководствуясь одним или несколькими показателями сравнения. 
+			     </p>
+			     <p>
+			     	При ранжировании эксперт должен расположить альтернативы в порядке, который представляется ему наиболее рациональным, и приписать каждой из них числа натурального ряда - ранги. При этом ранг 1 (первый) получает наиболее предпочтительная альтернатива, а ранг n - наименее предпочтительная. Следовательно, порядковая шкала, используемая для ранжирования, должна удовлетворять условию равенства числа рангов п числу ранжируемых альтернатив n.
+			     </p>
+			     <p>
+			     	При групповом экспертном оценивании каждый i-й эксперт присваивает каждой j-й альтернативе ранг rij. В результате экспертного оценивания получается матрица рангов ||rij||, i=1,...,m. j=1,...,n, размерностью mn, где m - число экспертов; n - число альтернатив.
+			     </p>
+			     <p>
+			     	Один из распространненых способов получения групповой ранжировки заключается в следующем. Для каждой альтернативы подсчитываем сумму рангов:
+			     </p>
+			     <p>
+			     	Затем исходя из величины Rj устанавливают результрующий ранг для каждой альтернативы. Наивысший (первый) ранг присваивают альтернативе, получившей наименьшую сумму рангов, и, наоборот, альтернативе, получившей наибольшую сумму рангов, присваивают самый низкий ранг.
+			     </p>
+			     <p>
+			     	Ранги альтернатив определяют только порядок их расположения по показателям сравнения. Ранги как числа не дают возможности сделать вывод о том, насколько или во сколько раз предпочтительнее одна альтернатива по сравнению с другими.
+			     </p>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<div class="input-group" id="input">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text">Количество</span>
+		  </div>
+		  <input type="text" aria-label="First name" class="form-control" placeholder="Экспертов" type="number" max="10">
+		  <input type="text" aria-label="Last name" class="form-control" placeholder="Альтернатив" type="number" max="10">
+		  <button onclick="groupRange()">Принять</button>
+		</div>
+<!-- 	<div id="table">
+		
+	</div> -->
+
+	</div>
+<script src="js/groupRange.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
