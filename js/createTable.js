@@ -1,4 +1,4 @@
-function createTable(experts, alternativs, values) {
+export function createTable(experts, alternativs, values) {
 	var divBlock = document.createElement('div');
 	var table = document.createElement('table');
 	
